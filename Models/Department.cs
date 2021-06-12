@@ -26,6 +26,9 @@ namespace RazorPagesEFContosoUniversity.Models
 
         public int? InstructorID { get; set; }
 
+        [Timestamp]//عمود التعقب
+        public byte[] ConcurrencyToken { get; set; }
+
         public Instructor Administrator { get; set; }
         public ICollection<Course> Courses { get; set; }
 
